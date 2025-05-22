@@ -13,10 +13,10 @@
     </style>
 </head>
 <body>
-<model-viewer src="assets/models/Chair.glb" poster="assets/models/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+<model-viewer src="assets/models/testRA2.glb" ios-src="testRA2.usdz" poster="assets/models/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
-    View in your space
+    Voir chez toi
   </button>
 
   <div id="ar-prompt">
@@ -31,23 +31,6 @@
   <a href="ModelWithSize.html">Page 3</a>
 
 
-  <div class="slider">
-    <div class="slides">
-      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('assets/models/Chair.png');">
-
-      </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('assets/models/Mixer.png');">
-
-      </button><button class="slide" onclick="switchSrc(this, 'DamagedHelmet')" style="background-image: url('assets/models/DamagedHelmet.png');">
-
-      </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('assets/models/GeoPlanter.png');">
-
-      </button><button class="slide" onclick="switchSrc(this, 'Tester_Module_BI_Rev14_6L')" style="background-image: url('assets/models/Tester_Module_BI_Rev14_6L.png');">
-      
-      </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('assets/models/ToyTrain.png');">
-      
-      </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('assets/models/Canoe.png');">    
-    </button></div>
-  </div>
 </model-viewer>
 
 <script type="module">
