@@ -13,7 +13,11 @@
     </style>
 </head>
 <body>
-<model-viewer src="assets/models/Quest3.glb" ios-src="Quest3.usdc" poster="assets/ic_view_in_ar_new_googblue_48dp.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+
+  <header>
+    <img src="fauchere_ceramique.png" alt="Logo Client">
+  </header>
+<model-viewer src="assets/models/Quest3.glb" ios-src="Quest3.usdc" poster="assets/ic_view_in_ar_new_googblue_48dp.png" shadow-intensity="0" exposure="0.5" ar ar-modes="webxr scene-viewer quick-look" camera-controls disable-zoom alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
     Voir chez toi
@@ -26,7 +30,14 @@
   <button id="ar-failure">
     AR is not tracking!
   </button>
-
+  
+  <button class="buy-button" style="background: #28a745;" onclick="window.location.href='https://laetitia-fauchere.com/collections/vases/products/vase-coquillage';">
+    Commander
+  </button>
+  
+  <footer>
+    &copy; 2025 pIAxel Studio
+  </footer>
 
 </model-viewer>
 
@@ -174,6 +185,25 @@
   .slide:focus-visible {
     outline: 1px solid #4285f4;
   }
+  
+  .buy-button {
+	  margin: 10px;
+	  padding: 15px 30px;
+	  font-size: 18px;
+	  background: #0078d7;
+	  color: white;
+	  border: none;
+	  border-radius: 8px;
+	  cursor: pointer;
+	  transition: transform 0.1s ease, box-shadow 0.2s ease;
+	  box-shadow: 0 6px 12px rgba(0, 120, 215, 0.3);
+	}
+	.buy-button:hover {
+	  box-shadow: 0 8px 18px rgba(0, 120, 215, 0.5);
+	}
+	.buy-button:active {
+	  transform: scale(0.95);
+	}
 
 </style>
 
