@@ -14,9 +14,11 @@
 </head>
 <body>
 
-  <header>
-    <img src="fauchere_ceramique.png" alt="Logo Client">
-  </header>
+  <div class="banner-top">
+    <img src="assets/fauchere_ceramique.png" alt="Fauchere Ceramique" class="banner-logo">
+    <button class="banner-button" onclick="window.location.href='https://tonsite.com/catalogue';">Voir le catalogue</button>
+  </div>
+  
 <model-viewer src="assets/models/Quest3.glb" ios-src="Quest3.usdc" poster="assets/ic_view_in_ar_new_googblue_48dp.png" shadow-intensity="0" exposure="0.5" ar ar-modes="webxr scene-viewer quick-look" camera-controls disable-zoom alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
@@ -38,6 +40,11 @@
   <footer>
     &copy; 2025 pIAxel Studio
   </footer>
+  
+    <div class="banner-bottom">
+    <img src="logo_pIAxel.svg" alt="Logo pIAxel Studio" class="banner-logo">
+    <button class="banner-button" onclick="window.location.href='https://studiopixels.net/';">Nous contacter</button>
+  </div>
 
 </model-viewer>
 
@@ -64,11 +71,59 @@
   :not(:defined) > * {
     display: none;
   }
+  
+  body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .banner-top, .banner-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      color: white;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    .banner-top {
+      top: 0;
+    }
+    .banner-bottom {
+      bottom: 0;
+    }
+    .banner-logo {
+      height: 40px;
+    }
+    .banner-button {
+      background: #0078d7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .banner-button:hover {
+      background: #005fa3;
+    }
 
   model-viewer {
     background-color: #eee;
     overflow-x: hidden;
     --poster-color: #eee;
+	  width: 100%;
+	  max-width: 600px;
+	  height: 500px;
+	  margin: 0 auto;
+	  background: white;
+	  border-radius: 10px;
+	  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
   #ar-button {
@@ -204,6 +259,12 @@
 	.buy-button:active {
 	  transform: scale(0.95);
 	}
+    footer {
+      margin-bottom: 60px;
+      font-size: 0.9em;
+      color: #777;
+      padding: 10px;
+    }
 
 </style>
 
