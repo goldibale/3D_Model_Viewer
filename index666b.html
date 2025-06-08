@@ -15,14 +15,14 @@
 <body>
 
   <div class="banner-top">
-    <img src="assets/fauchere_ceramique.png" alt="Fauchere Ceramique" class="banner-logo">
-    <button class="banner-button" onclick="window.location.href='https://tonsite.com/catalogue';">Voir le catalogue</button>
+    <img src="assets/logoToilesFilantes.webp" alt="Toiles Filantes" class="banner-logo">
+    <button class="banner-button" onclick="window.location.href='https://lestoilesfilantes.bigcartel.com/products';">Boutique</button>
   </div>
   
-<model-viewer src="assets/models/Quest3.glb" ios-src="Quest3.usdc" poster="assets/ic_view_in_ar_new_googblue_48dp.png" shadow-intensity="0" exposure="0.5" ar ar-modes="webxr scene-viewer quick-look" camera-controls disable-zoom alt="A 3D model carousel">
+<model-viewer src="assets/models/paniere01a.glb" ios-src="paniere01a.usdc" poster="assets/paniere01a.gif" shadow-intensity="0" exposure="0.5" ar ar-modes="webxr scene-viewer quick-look" camera-controls disable-zoom alt="Panière de rangement en tissu">
   
   <button slot="ar-button" id="ar-button">
-    Voir chez toi
+    Visualiser chez soi
   </button>
 
   <div id="ar-prompt">
@@ -30,24 +30,18 @@
   </div>
 
   <button id="ar-failure">
-    AR is not tracking!
-  </button>
-  
-  <button class="buy-button" style="background: #28a745;" onclick="window.location.href='https://laetitia-fauchere.com/collections/vases/products/vase-coquillage';">
-    Commander
-  </button>
-  
-  <footer>
-    &copy; 2025 pIAxel Studio
-  </footer>
-  
-    <div class="banner-bottom">
-    <img src="logo_pIAxel.svg" alt="Logo pIAxel Studio" class="banner-logo">
-    <button class="banner-button" onclick="window.location.href='https://studiopixels.net/';">Nous contacter</button>
-  </div>
+    Orientez votre camera vers l'emplacement souhaité
+  </button> 
 
 </model-viewer>
 
+    <div class="banner-bottom">
+		<img src="logo_pIAxel_2.svg" alt="&copy; 2025 pIAxel Studio" class="banner-logo">
+		  <button class="buy-button" style="background: #28a745;" onclick="window.location.href='https://lestoilesfilantes.bigcartel.com/product/sur-commande-paniers-de-rangement-en-tissu';">
+    Commander
+  </button>
+  </div>
+  
 <script type="module">
   const modelViewer = document.querySelector("model-viewer");
 
