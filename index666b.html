@@ -13,13 +13,26 @@
     </style>
 </head>
 <body>
-
+	
+  <!-- +Banner Top+ -->
+  <!--
   <div class="banner-top">
     <img src="assets/logoToilesFilantes.webp" alt="Toiles Filantes" class="banner-logo">
     <button class="banner-button" onclick="window.location.href='https://lestoilesfilantes.bigcartel.com/products';">Boutique</button>
   </div>
+  -->
+<div class="banner-top">
+  <div class="banner-content">
+    <img src="assets/logoToilesFilantes2.webp" alt="Toiles Filantes" class="banner-logo-top">
+	
+	Panières de rangement en tissu
+	
+    <button class="banner-button" onclick="window.location.href='https://lestoilesfilantes.bigcartel.com/products';">Boutique</button>
+  </div>
+</div>
+<!-- -Banner Top- -->
   
-<model-viewer src="assets/models/paniere01a.glb" ios-src="paniere01a.usdc" poster="assets/models/paniere01a.gif" shadow-intensity="0" exposure="0.5" ar ar-modes="webxr scene-viewer quick-look" camera-controls disable-zoom alt="Panière de rangement en tissu">
+<model-viewer src="assets/models/paniere01b.glb" ios-src="paniere01b.usdz" poster="assets/models/paniere01a.gif" shadow-intensity="0" exposure="0.5" ar ar-modes="webxr scene-viewer quick-look" camera-controls disable-zoom alt="Panière de rangement en tissu">
   
   <button slot="ar-button" id="ar-button">
     Visualiser chez soi
@@ -35,12 +48,27 @@
 
 </model-viewer>
 
+  <!-- +Banner Bottom+ -->
+  <!--
     <div class="banner-bottom">
 		<img src="logo_pIAxel_2.svg" alt="&copy; 2025 pIAxel Studio" class="banner-logo">
 		  <button class="buy-button" style="background: #28a745;" onclick="window.location.href='https://lestoilesfilantes.bigcartel.com/product/sur-commande-paniers-de-rangement-en-tissu';">
     Commander
   </button>
   </div>
+  -->
+<div class="banner-bottom">
+  <div class="banner-content">
+  <button class="buy-button" onclick="window.location.href='https://lestoilesfilantes.bigcartel.com/product/sur-commande-paniers-de-rangement-en-tissu';">
+      Commander
+    </button>
+	
+    <img src="logo_pIAxelStudio2.webp" alt="pIAxel Studio" class="banner-logo-bottom">
+    
+  </div>
+</div>
+  <!-- -Banner Bottom- -->
+  
   
 <script type="module">
   const modelViewer = document.querySelector("model-viewer");
@@ -67,7 +95,7 @@
   }
   
   body {
-      font-family: Arial, sans-serif;
+      font-family: Snell Roundhand, cursive;
       background: #f4f4f4;
       margin: 0;
       padding: 0;
@@ -79,10 +107,11 @@
       align-items: center;
       background-color: #1a1a1a;
       color: white;
-      padding: 10px 20px;
+      padding: 15px 15px;
       position: fixed;
-      width: 100%;
+      width: 97%;
       z-index: 1000;
+	  margin: 5px;
     }
     .banner-top {
       top: 0;
@@ -90,8 +119,15 @@
     .banner-bottom {
       bottom: 0;
     }
-    .banner-logo {
-      height: 40px;
+    .banner-logo-top {
+	  height: 40px;
+	  max-width: 220px;
+	  object-fit: contain;
+    }
+	.banner-logo-bottom {
+	  height: 50px;
+	  max-width: 50px;
+	  object-fit: contain;
     }
     .banner-button {
       background: #0078d7;
@@ -106,14 +142,19 @@
     .banner-button:hover {
       background: #005fa3;
     }
+	.banner-content {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  width: 100%;
+	}
 
   model-viewer {
     background-color: #eee;
     overflow-x: hidden;
     --poster-color: #eee;
 	  width: 100%;
-	  max-width: 600px;
-	  height: 500px;
+	  height: 90vh;
 	  margin: 0 auto;
 	  background: white;
 	  border-radius: 10px;
@@ -236,7 +277,8 @@
   }
   
   .buy-button {
-	  margin: 10px;
+	  margin: 0px calc(40vw - 15px);
+	  margin: 0px calc(40vw - 15px);
 	  padding: 15px 30px;
 	  font-size: 18px;
 	  background: #0078d7;
